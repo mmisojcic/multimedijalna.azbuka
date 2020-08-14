@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="author" content="Marko Misojčić - misojcicmarko@gmail.com">
+  <meta name="keywords" content="Mултимедијална азбука, Multimedijalna azbuka">
+  <meta name="description"
+    content="Мултимедијална азбука-едукација кроз игру | Multimedijalna azbuka-edukacija kroz igru">
+  <link rel="shortcut icon" type="image/x-icon" href="img/iconlogo.ico" />
+
+  <link rel="stylesheet" type="text/css" href="igra_pisanja.css" />
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="igra_pisanja.js"></script>
+  <title>Multimedijalna azbuka-Prva rec</title>
+</head>
+
+<body id="body" onload="preloaduj();">
+
+  <div id="igra">
+    <div id="galerija">
+      <div class="granica">
+        <div id="p" class="pojam_container">
+          <img src="img/pojmovi/start.jpg" id="pojam" />
+        </div>
+      </div>
+      <img src="img/levo.png" id="nazad" title="Prethodna" onclick="slider()" />
+      <img src="img/desno.png" id="napred" title="Sledeća" onclick="slider()" />
+    </div>
+
+    <div id="boje"></div>
+
+    <div id="slova"></div>
+
+    <img src="img/duga.png" class="duga" />
+    <img src="img/oblaci1.png" class="oblaci1" />
+  </div>
+
+</body>
+
+</html>

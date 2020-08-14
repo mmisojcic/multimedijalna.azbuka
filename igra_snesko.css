@@ -1,0 +1,145 @@
+body{
+  margin:0;
+  background-image: url('img/snesko/bck.jpg');
+  overflow: hidden;
+}
+@keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 300px 1500px, -100px 1000px, 100px 1000px;}
+}
+@-moz-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 300px 1500px, -100px 1000px, 100px 1000px;}
+}
+@-webkit-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 300px 1500px, -100px 1000px, 100px 1000px;}
+}
+@-ms-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 300px 1500px, -100px 1000px, 100px 1000px;}
+}
+.sneg{
+  position:absolute;
+  z-index:7780;
+  width:100vw;
+  height:100vh;
+  background-image: url('img/snesko/sneg1.png'), url('img/snesko/sneg2.png'), url('img/snesko/sneg3.png');
+  -webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+  overflow: hidden;
+}
+#pozadina{
+  position:absolute;
+  z-index:5556;
+  width:100vw;
+  height:100vh;
+}
+.slovo{
+  position:relative;
+  z-index:7779;
+  width:4vw;
+  height:4vw;
+  border-radius:50%;
+  box-shadow:0px 0px 9px rgba(255,255,255,0.9), 0px 0px 15px rgba(255,255,255,0.9), 0px 0px 15px rgba(178,209,255,0.9);
+  opacity:0.95;
+  position: absolute;
+  top:0;
+}
+#snesko{
+  position:absolute;
+  left:50%;
+  bottom:2vw;
+  transform:translateX(-50%);
+  width: 28vw;
+  z-index: 7778;
+}
+#snesko img{
+  position:absolute;
+  z-index: 7777;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:block;
+  opacity:0;
+}
+#rukavice{
+  position:absolute;
+  z-index: 5556;
+  width:15vw;
+  bottom:0;
+  display:block;
+  cursor:e-resize;
+}
+.oblaci {
+  width:100%;
+  position:absolute;
+  z-index: 7777;
+  top:0;
+  }
+.brdo {
+  position:absolute;
+  z-index: 4444;
+  width:100%;
+  bottom:0;
+  }
+#novaigra{
+  position:absolute;
+  width:20vw;
+  top:5%;
+  left:50%;
+  border-radius:40%;
+  display:none;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform:translateX(-50%);
+  -moz-transform:translateX(-50%);
+  -o-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  transform:translateX(-50%);
+  -moz-transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  z-index:8005;
+}
+#novaigra:hover{
+  cursor:pointer;
+  -webkit-transform:translateX(-50%) scale(1.2);
+  -moz-transform:translateX(-50%) scale(1.2);
+  -o-transform:translateX(-50%) scale(1.2);
+   transform:translateX(-50%) scale(1.2);
+  }
+
+@media  screen and (max-width: 1023px) {
+  #snesko{
+    width: 45vw;
+  }
+  #rukavice{
+    width:25vw;
+  }
+  .slovo{
+    width:8vw;
+    height:8vw;
+  }
+  #novaigra{
+    width:30vw;
+    top:10%;
+  }
+}
+@media  screen and (max-width: 480px) {
+  #snesko{
+    width: 55vw;
+  }
+  #rukavice{
+    width:30vw;
+  }
+  .slovo{
+    width:10vw;
+    height:10vw;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	  <meta name="author" content="Marko Misojčić - misojcicmarko@gmail.com">
+	  <meta name="keywords" content="Mултимедијална азбука, Multimedijalna azbuka">
+	  <meta name="description" content="Мултимедијална азбука-едукација кроз игру | Multimedijalna azbuka-edukacija kroz igru">
+	  <link rel="shortcut icon" type="image/x-icon" href="img/iconlogo.ico" />
+
+	  <link rel="stylesheet" type="text/css" href="igra_pamcenja.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="igra_pamcenja.js"></script>
+	  <title>Multimedijalna azbuka-Igra pamćenja</title>
+  </head>
+
+ <body id="body" onload="scale();">
+
+   <div id="igra" onmouseover="sakrijPronadjene()">
+     <div id="verzija_holder">
+       <img src="img/a-i.png" onclick="verzija(20,'A-I/',3,'div_20slova');"/>
+       <img src="img/j-r.png" onclick="verzija(20,'J-R/',3,'div_20slova');"/>
+       <img src="img/s-sh.png" onclick="verzija(20,'S-SH/',3,'div_20slova');"/>
+       <img src="img/a-sh.png" onclick="verzija(60,'A-SH/',10,'div_slova');"/>
+    </div>
+
+    <img src="img/duga.png" class="duga"/>
+    <img src="img/oblaci1.png" class="oblaci1"/>
+    <img src="img/neutral.png" id="idPomoc" title="Помоћ" onclick="pomoc()" onmouseover="pomoc_hover()" onmouseout="pomoc_out()"/>
+    <div id="div_slv" class="div_slova" >
+      <img id="0" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="1" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="2" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="3" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="4" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="5" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="6" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="7" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="8" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="9" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="10" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="11" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="12" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="13" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="14" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="15" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="16" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id);"/>
+      <img id="17" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="18" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="19" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="20" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="21" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="22" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="23" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="24" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="25" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="26" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="27" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="28" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="29" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="30" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="31" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="32" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="33" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="34" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="35" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="36" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="37" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="38" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="39" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="40" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="41" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="42" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="43" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="44" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="45" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="46" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="47" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="48" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="49" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="50" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="51" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="52" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="53" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="54" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="55" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="56" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="57" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="58" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+      <img id="59" src="img/cover.jpg" onclick="pokazi(this.id)" onmouseover="gore(this.id)" onmouseout="dole(this.id)"/>
+    </div>
+   </div>
+
+   <div id="dim">
+     <div id="splash">
+       <div style="box-shadow:inset 0px 0px 4px #000;width:100%;height:100%;overflow:hidden;border-radius:2px;">
+          <img src="img/logo.png"/>
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+       </div>
+     </div>
+  </div>
+
+ </body>
+</html>

@@ -1,0 +1,68 @@
+#main-anime-box{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(#FAFAF7, #e5e5da);
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  z-index: 89999;
+}
+#box-anime{
+  position:fixed;
+  margin:3% 15%;
+  width:70%;
+  height:92%;
+  padding:0;
+  z-index: 90000;
+}
+.box-small{
+  position: absolute;
+  display: block;
+  border:1px solid #ccc;
+  margin:0.7%;
+  padding:0;
+  opacity:0;
+  width:20%;
+  height:20%;
+  border-radius:2%;
+  box-shadow:0px 0px 6px rgba(0,0,0,0.7);
+  border:1px solid #8FA3FF;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform:translate3d(0,0,0);
+  -moz-transform:translate3d(0,0,0);
+  -o-transform:translate3d(0,0,0);
+  -ms-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+}
+#text{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 1111111;
+  display: none;
+  margin:0;
+  padding:1%;
+  width:100%;
+  font-weight: 700;
+  letter-spacing:5px;
+  color:#FAFAF7;
+  font-size: 250%;
+  text-shadow:0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1);
+  background: linear-gradient(to right, rgbA(182,230,87,0),rgbA(182,230,87,0.9),rgbA(182,230,87,0));
+}
+@media  screen and (min-width:1366px){
+  #box-anime{
+    margin:3% 20%;
+    width:60%;
+    height:90%;
+  }
+}
